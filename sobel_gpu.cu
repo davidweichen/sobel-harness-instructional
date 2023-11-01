@@ -178,6 +178,14 @@ main (int ac, char *av[])
 
    // ADD CODE HERE: insert your code here to set a different number of thread blocks or # of threads per block
 
+   if(ac>1)
+   {
+   	nThreadsPerBlock = atoi(av[1]);
+   }
+   if(ac>2)
+   {
+   	nBlocks = atoi(av[2]);
+   }
 
 
    printf(" GPU configuration: %d blocks, %d threads per block \n", nBlocks, nThreadsPerBlock);
