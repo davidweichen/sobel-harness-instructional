@@ -15,6 +15,8 @@
 # it is assumed your environment is set up properly for using the Cori GPUs
 # prior to you launching this batch script
 #
+dcgmi profile –pause
+
 for B in 1 4 16 64 256 1024 4096
    do
       for N in 32 64 128 256 512 1024  
