@@ -180,11 +180,11 @@ main (int ac, char *av[])
 
    if(ac>1)
    {
-   	nThreadsPerBlock = atoi(av[1]);
+   	nThreadsPerBlock = atoi(av[2]);
    }
    if(ac>2)
    {
-   	nBlocks = atoi(av[2]);
+   	nBlocks = atoi(av[3]);
    }
 
 
