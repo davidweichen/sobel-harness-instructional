@@ -1,0 +1,1 @@
+/opt/cray/pe/craype/2.7.20/bin/CC -fast -O3 -DNDEBUG -fast -mp=gpu -Minfo=mp,accel CMakeFiles/sobel_cpu_omp_offload.dir/sobel_cpu_omp_offload.cpp.o -o sobel_cpu_omp_offload 

@@ -1,0 +1,5 @@
+/pscratch/sd/d/david/sobel-harness-instructional/build/CMakeFiles/edit_cache.dir
+/pscratch/sd/d/david/sobel-harness-instructional/build/CMakeFiles/rebuild_cache.dir
+/pscratch/sd/d/david/sobel-harness-instructional/build/CMakeFiles/sobel_gpu.dir
+/pscratch/sd/d/david/sobel-harness-instructional/build/CMakeFiles/sobel_cpu_omp_offload.dir
+/pscratch/sd/d/david/sobel-harness-instructional/build/CMakeFiles/sobel_cpu.dir

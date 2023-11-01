@@ -1,0 +1,1833 @@
+Successfully paused profiling.
+threads per blocks=32 blocks=1
+==PROF== Connected to process 1896753 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 1 blocks, 32 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1896753
+[1896753] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:19:23, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.02
+    gpu__time_duration.avg                                                          second                           1.01
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           0.23
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.22
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                  1,105,523,299
+    Memory [%]                                                                           %                           0.03
+    DRAM Throughput                                                                      %                           0.02
+    Duration                                                                        second                           1.01
+    L1/TEX Cache Throughput                                                              %                           2.91
+    L2 Cache Throughput                                                                  %                           0.02
+    SM Active Cycles                                                                 cycle                  10,236,093.94
+    Compute (SM) [%]                                                                     %                           0.03
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                         32
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           1
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                             32
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 1 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             64
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             64
+    Theoretical Active Warps per SM                                                   warp                             32
+    Theoretical Occupancy                                                                %                             50
+    Achieved Occupancy                                                                   %                           1.56
+    Achieved Active Warps Per SM                                                      warp                              1
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy (50.0%) is limited by the number of blocks that can fit on the SM This    
+          kernel's theoretical occupancy (50.0%) is limited by the required amount of shared memory The difference      
+          between calculated theoretical (50.0%) and measured achieved occupancy (1.6%) can be the result of warp       
+          scheduling overheads or workload imbalances during the kernel execution. Load imbalances can occur between    
+          warps within a block as well as across blocks of the same kernel. See the CUDA Best Practices Guide           
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,926
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=64 blocks=1
+==PROF== Connected to process 1899309 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 1 blocks, 64 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1899309
+[1899309] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:21:00, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.04
+    gpu__time_duration.avg                                                         msecond                         508.33
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           0.46
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.22
+    SM Frequency                                                             cycle/nsecond                           1.10
+    Elapsed Cycles                                                                   cycle                    556,727,681
+    Memory [%]                                                                           %                           0.05
+    DRAM Throughput                                                                      %                           0.04
+    Duration                                                                       msecond                         508.33
+    L1/TEX Cache Throughput                                                              %                           5.78
+    L2 Cache Throughput                                                                  %                           0.03
+    SM Active Cycles                                                                 cycle                   5,154,931.14
+    Compute (SM) [%]                                                                     %                           0.05
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                         64
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           1
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                             64
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 1 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             32
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             32
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                           3.12
+    Achieved Active Warps Per SM                                                      warp                           2.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (3.1%) can be the result of warp scheduling overheads    
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,928
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=128 blocks=1
+==PROF== Connected to process 1900249 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 1 blocks, 128 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1900249
+[1900249] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:21:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.07
+    gpu__time_duration.avg                                                         msecond                         256.26
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           0.93
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                    280,539,192
+    Memory [%]                                                                           %                           0.11
+    DRAM Throughput                                                                      %                           0.07
+    Duration                                                                       msecond                         256.26
+    L1/TEX Cache Throughput                                                              %                          11.50
+    L2 Cache Throughput                                                                  %                           0.07
+    SM Active Cycles                                                                 cycle                   2,597,802.31
+    Compute (SM) [%]                                                                     %                           0.11
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        128
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           1
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                            128
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 1 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             16
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             16
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                           6.25
+    Achieved Active Warps Per SM                                                      warp                           4.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (6.2%) can be the result of warp scheduling overheads    
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,932
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=256 blocks=1
+==PROF== Connected to process 1901101 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 1 blocks, 256 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1901101
+[1901101] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:22:19, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.13
+    gpu__time_duration.avg                                                         msecond                         136.53
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           0.93
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                    149,360,935
+    Memory [%]                                                                           %                           0.20
+    DRAM Throughput                                                                      %                           0.13
+    Duration                                                                       msecond                         136.53
+    L1/TEX Cache Throughput                                                              %                          21.72
+    L2 Cache Throughput                                                                  %                           0.12
+    SM Active Cycles                                                                 cycle                      1,382,731
+    Compute (SM) [%]                                                                     %                           0.20
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        256
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           1
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                            256
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 1 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              8
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                              8
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          12.50
+    Achieved Active Warps Per SM                                                      warp                           8.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (12.5%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,940
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=512 blocks=1
+==PROF== Connected to process 1901159 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 1 blocks, 512 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1901159
+[1901159] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:22:37, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.23
+    gpu__time_duration.avg                                                         msecond                          78.84
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           0.93
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     86,314,457
+    Memory [%]                                                                           %                           0.35
+    DRAM Throughput                                                                      %                           0.23
+    Duration                                                                       msecond                          78.84
+    L1/TEX Cache Throughput                                                              %                          38.04
+    L2 Cache Throughput                                                                  %                           0.22
+    SM Active Cycles                                                                 cycle                        798,799
+    Compute (SM) [%]                                                                     %                           0.34
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        512
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           1
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          16.38
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                            512
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 1 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              4
+    Block Limit Shared Mem                                                           block                             16
+    Block Limit Warps                                                                block                              4
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          25.00
+    Achieved Active Warps Per SM                                                      warp                          16.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (25.0%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,956
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=1024 blocks=1
+==PROF== Connected to process 1901215 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 1 blocks, 1024 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1901215
+[1901215] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:22:52, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.36
+    gpu__time_duration.avg                                                         msecond                          49.78
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           0.93
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     54,448,865
+    Memory [%]                                                                           %                           0.57
+    DRAM Throughput                                                                      %                           0.36
+    Duration                                                                       msecond                          49.78
+    L1/TEX Cache Throughput                                                              %                          61.13
+    L2 Cache Throughput                                                                  %                           0.34
+    SM Active Cycles                                                                 cycle                     504,326.98
+    Compute (SM) [%]                                                                     %                           0.54
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                      1,024
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           1
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                           8.19
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          1,024
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 1 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              2
+    Block Limit Shared Mem                                                           block                              8
+    Block Limit Warps                                                                block                              2
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          50.00
+    Achieved Active Warps Per SM                                                      warp                          32.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (50.0%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,988
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=32 blocks=4
+==PROF== Connected to process 1902013 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 4 blocks, 32 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1902013
+[1902013] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:23:43, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.06
+    gpu__time_duration.avg                                                         msecond                         296.59
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           0.93
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.22
+    SM Frequency                                                             cycle/nsecond                           1.10
+    Elapsed Cycles                                                                   cycle                    324,776,019
+    Memory [%]                                                                           %                           0.11
+    DRAM Throughput                                                                      %                           0.06
+    Duration                                                                       msecond                         296.59
+    L1/TEX Cache Throughput                                                              %                           2.84
+    L2 Cache Throughput                                                                  %                           0.09
+    SM Active Cycles                                                                 cycle                  12,027,581.94
+    Compute (SM) [%]                                                                     %                           0.09
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                         32
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           4
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                            128
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 4 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             64
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             64
+    Theoretical Active Warps per SM                                                   warp                             32
+    Theoretical Occupancy                                                                %                             50
+    Achieved Occupancy                                                                   %                           1.56
+    Achieved Active Warps Per SM                                                      warp                           1.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy (50.0%) is limited by the required amount of shared memory This kernel's  
+          theoretical occupancy (50.0%) is limited by the number of blocks that can fit on the SM The difference        
+          between calculated theoretical (50.0%) and measured achieved occupancy (1.6%) can be the result of warp       
+          scheduling overheads or workload imbalances during the kernel execution. Load imbalances can occur between    
+          warps within a block as well as across blocks of the same kernel. See the CUDA Best Practices Guide           
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,932
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=64 blocks=4
+==PROF== Connected to process 1903314 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 4 blocks, 64 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1903314
+[1903314] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:24:11, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.12
+    gpu__time_duration.avg                                                         msecond                         150.20
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           1.85
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                    164,146,752
+    Memory [%]                                                                           %                           0.21
+    DRAM Throughput                                                                      %                           0.12
+    Duration                                                                       msecond                         150.20
+    L1/TEX Cache Throughput                                                              %                           5.69
+    L2 Cache Throughput                                                                  %                           0.17
+    SM Active Cycles                                                                 cycle                   6,081,000.77
+    Compute (SM) [%]                                                                     %                           0.18
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                         64
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           4
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                            256
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 4 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             32
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             32
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                           3.12
+    Achieved Active Warps Per SM                                                      warp                           2.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (3.1%) can be the result of warp scheduling overheads    
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,940
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=128 blocks=4
+==PROF== Connected to process 1903763 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 4 blocks, 128 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1903763
+[1903763] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:24:28, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.23
+    gpu__time_duration.avg                                                         msecond                          78.39
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           3.70
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     85,758,615
+    Memory [%]                                                                           %                           0.39
+    DRAM Throughput                                                                      %                           0.23
+    Duration                                                                       msecond                          78.39
+    L1/TEX Cache Throughput                                                              %                          10.62
+    L2 Cache Throughput                                                                  %                           0.27
+    SM Active Cycles                                                                 cycle                   3,173,351.13
+    Compute (SM) [%]                                                                     %                           0.35
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        128
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           4
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                            512
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 4 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             16
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             16
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                           6.25
+    Achieved Active Warps Per SM                                                      warp                           4.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (6.2%) can be the result of warp scheduling overheads    
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,956
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=256 blocks=4
+==PROF== Connected to process 1904990 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 4 blocks, 256 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1904990
+[1904990] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:24:39, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.43
+    gpu__time_duration.avg                                                         msecond                          42.19
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           3.70
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     46,146,831
+    Memory [%]                                                                           %                           0.71
+    DRAM Throughput                                                                      %                           0.43
+    Duration                                                                       msecond                          42.19
+    L1/TEX Cache Throughput                                                              %                          19.18
+    L2 Cache Throughput                                                                  %                           0.44
+    SM Active Cycles                                                                 cycle                   1,710,105.14
+    Compute (SM) [%]                                                                     %                           0.64
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        256
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           4
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          1,024
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 4 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              8
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                              8
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          12.50
+    Achieved Active Warps Per SM                                                      warp                           8.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (12.5%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,988
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=512 blocks=4
+==PROF== Connected to process 1905023 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 4 blocks, 512 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1905023
+[1905023] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:24:47, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.76
+    gpu__time_duration.avg                                                         msecond                          23.89
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           3.71
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     26,125,263
+    Memory [%]                                                                           %                           1.30
+    DRAM Throughput                                                                      %                           0.76
+    Duration                                                                       msecond                          23.89
+    L1/TEX Cache Throughput                                                              %                          35.09
+    L2 Cache Throughput                                                                  %                           1.08
+    SM Active Cycles                                                                 cycle                     967,517.80
+    Compute (SM) [%]                                                                     %                           1.13
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        512
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           4
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          16.38
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          2,048
+    Waves Per SM                                                                                                     0.01
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 4 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              4
+    Block Limit Shared Mem                                                           block                             16
+    Block Limit Warps                                                                block                              4
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          24.97
+    Achieved Active Warps Per SM                                                      warp                          15.98
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (25.0%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,052
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=1024 blocks=4
+==PROF== Connected to process 1905078 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 4 blocks, 1024 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1905078
+[1905078] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:24:55, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           1.16
+    gpu__time_duration.avg                                                         msecond                          15.72
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           3.69
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.22
+    SM Frequency                                                             cycle/nsecond                           1.10
+    Elapsed Cycles                                                                   cycle                     17,241,198
+    Memory [%]                                                                           %                           1.92
+    DRAM Throughput                                                                      %                           1.16
+    Duration                                                                       msecond                          15.72
+    L1/TEX Cache Throughput                                                              %                          51.94
+    L2 Cache Throughput                                                                  %                           1.64
+    SM Active Cycles                                                                 cycle                     636,793.77
+    Compute (SM) [%]                                                                     %                           1.72
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                      1,024
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                           4
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                           8.19
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          4,096
+    Waves Per SM                                                                                                     0.02
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 4 blocks, which is less than the GPU's 108             
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              2
+    Block Limit Shared Mem                                                           block                              8
+    Block Limit Warps                                                                block                              2
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          48.44
+    Achieved Active Warps Per SM                                                      warp                          31.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (48.4%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,180
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=32 blocks=16
+==PROF== Connected to process 1905112 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 16 blocks, 32 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1905112
+[1905112] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:25:11, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.24
+    gpu__time_duration.avg                                                         msecond                          76.16
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           3.70
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     83,381,093
+    Memory [%]                                                                           %                           0.38
+    DRAM Throughput                                                                      %                           0.24
+    Duration                                                                       msecond                          76.16
+    L1/TEX Cache Throughput                                                              %                           2.54
+    L2 Cache Throughput                                                                  %                           0.34
+    SM Active Cycles                                                                 cycle                  12,343,519.91
+    Compute (SM) [%]                                                                     %                           0.36
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                         32
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          16
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                            512
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 16 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             64
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             64
+    Theoretical Active Warps per SM                                                   warp                             32
+    Theoretical Occupancy                                                                %                             50
+    Achieved Occupancy                                                                   %                           1.56
+    Achieved Active Warps Per SM                                                      warp                              1
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy (50.0%) is limited by the required amount of shared memory This kernel's  
+          theoretical occupancy (50.0%) is limited by the number of blocks that can fit on the SM The difference        
+          between calculated theoretical (50.0%) and measured achieved occupancy (1.6%) can be the result of warp       
+          scheduling overheads or workload imbalances during the kernel execution. Load imbalances can occur between    
+          warps within a block as well as across blocks of the same kernel. See the CUDA Best Practices Guide           
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,956
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=64 blocks=16
+==PROF== Connected to process 1905167 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 16 blocks, 64 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1905167
+[1905167] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:25:22, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.47
+    gpu__time_duration.avg                                                         msecond                          38.34
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                           7.38
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.22
+    SM Frequency                                                             cycle/nsecond                           1.10
+    Elapsed Cycles                                                                   cycle                     41,996,904
+    Memory [%]                                                                           %                           0.82
+    DRAM Throughput                                                                      %                           0.47
+    Duration                                                                       msecond                          38.34
+    L1/TEX Cache Throughput                                                              %                           5.55
+    L2 Cache Throughput                                                                  %                           0.63
+    SM Active Cycles                                                                 cycle                   6,199,393.46
+    Compute (SM) [%]                                                                     %                           0.71
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                         64
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          16
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          1,024
+    Waves Per SM                                                                                                     0.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 16 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             32
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             32
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                           3.12
+    Achieved Active Warps Per SM                                                      warp                           2.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (3.1%) can be the result of warp scheduling overheads    
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,873,988
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=128 blocks=16
+==PROF== Connected to process 1905201 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 16 blocks, 128 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1905201
+[1905201] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:25:30, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.90
+    gpu__time_duration.avg                                                         msecond                          20.09
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                          14.82
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.22
+    SM Frequency                                                             cycle/nsecond                           1.10
+    Elapsed Cycles                                                                   cycle                     22,004,930
+    Memory [%]                                                                           %                           1.50
+    DRAM Throughput                                                                      %                           0.90
+    Duration                                                                       msecond                          20.09
+    L1/TEX Cache Throughput                                                              %                          10.16
+    L2 Cache Throughput                                                                  %                           1.18
+    SM Active Cycles                                                                 cycle                   3,255,504.10
+    Compute (SM) [%]                                                                     %                           1.35
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        128
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          16
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          2,048
+    Waves Per SM                                                                                                     0.01
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 16 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             16
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             16
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                           6.25
+    Achieved Active Warps Per SM                                                      warp                           4.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (6.2%) can be the result of warp scheduling overheads    
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,052
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=256 blocks=16
+==PROF== Connected to process 1905256 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 16 blocks, 256 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1905256
+[1905256] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:25:36, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           1.69
+    gpu__time_duration.avg                                                         msecond                          10.71
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                          14.80
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     11,714,604
+    Memory [%]                                                                           %                           2.78
+    DRAM Throughput                                                                      %                           1.69
+    Duration                                                                       msecond                          10.71
+    L1/TEX Cache Throughput                                                              %                          18.81
+    L2 Cache Throughput                                                                  %                           2.22
+    SM Active Cycles                                                                 cycle                   1,734,064.69
+    Compute (SM) [%]                                                                     %                           2.53
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        256
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          16
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          4,096
+    Waves Per SM                                                                                                     0.02
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 16 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              8
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                              8
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          12.49
+    Achieved Active Warps Per SM                                                      warp                           8.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (12.5%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,180
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=512 blocks=16
+==PROF== Connected to process 1906036 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 16 blocks, 512 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1906036
+[1906036] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:25:42, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           2.75
+    gpu__time_duration.avg                                                         msecond                           6.55
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                          14.69
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.22
+    SM Frequency                                                             cycle/nsecond                           1.10
+    Elapsed Cycles                                                                   cycle                      7,208,770
+    Memory [%]                                                                           %                           4.63
+    DRAM Throughput                                                                      %                           2.75
+    Duration                                                                       msecond                           6.55
+    L1/TEX Cache Throughput                                                              %                          31.42
+    L2 Cache Throughput                                                                  %                           3.62
+    SM Active Cycles                                                                 cycle                   1,062,553.76
+    Compute (SM) [%]                                                                     %                           4.11
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        512
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          16
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          16.38
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          8,192
+    Waves Per SM                                                                                                     0.04
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 16 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              4
+    Block Limit Shared Mem                                                           block                             16
+    Block Limit Warps                                                                block                              4
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          24.81
+    Achieved Active Warps Per SM                                                      warp                          15.88
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (24.8%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,436
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=1024 blocks=16
+==PROF== Connected to process 1906069 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 16 blocks, 1024 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1906069
+[1906069] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:25:47, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           4.49
+    gpu__time_duration.avg                                                         msecond                           4.04
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                          14.68
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.22
+    SM Frequency                                                             cycle/nsecond                           1.10
+    Elapsed Cycles                                                                   cycle                      4,423,391
+    Memory [%]                                                                           %                           7.61
+    DRAM Throughput                                                                      %                           4.49
+    Duration                                                                       msecond                           4.04
+    L1/TEX Cache Throughput                                                              %                          51.63
+    L2 Cache Throughput                                                                  %                           5.29
+    SM Active Cycles                                                                 cycle                     651,521.43
+    Compute (SM) [%]                                                                     %                           6.70
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.1 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                      1,024
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          16
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                           8.19
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                         16,384
+    Waves Per SM                                                                                                     0.07
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 16 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              2
+    Block Limit Shared Mem                                                           block                              8
+    Block Limit Warps                                                                block                              2
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          48.27
+    Achieved Active Warps Per SM                                                      warp                          30.89
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (48.3%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,948
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=32 blocks=64
+==PROF== Connected to process 1906125 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 64 blocks, 32 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1906125
+[1906125] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:25:55, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           0.95
+    gpu__time_duration.avg                                                         msecond                          19.12
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                          14.82
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     20,924,064
+    Memory [%]                                                                           %                           1.50
+    DRAM Throughput                                                                      %                           0.95
+    Duration                                                                       msecond                          19.12
+    L1/TEX Cache Throughput                                                              %                           2.53
+    L2 Cache Throughput                                                                  %                           1.35
+    SM Active Cycles                                                                 cycle                  12,358,821.45
+    Compute (SM) [%]                                                                     %                           1.42
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                         32
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          64
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          2,048
+    Waves Per SM                                                                                                     0.02
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 64 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             64
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             64
+    Theoretical Active Warps per SM                                                   warp                             32
+    Theoretical Occupancy                                                                %                             50
+    Achieved Occupancy                                                                   %                           1.56
+    Achieved Active Warps Per SM                                                      warp                           1.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy (50.0%) is limited by the number of blocks that can fit on the SM This    
+          kernel's theoretical occupancy (50.0%) is limited by the required amount of shared memory The difference      
+          between calculated theoretical (50.0%) and measured achieved occupancy (1.6%) can be the result of warp       
+          scheduling overheads or workload imbalances during the kernel execution. Load imbalances can occur between    
+          warps within a block as well as across blocks of the same kernel. See the CUDA Best Practices Guide           
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,052
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=64 blocks=64
+==PROF== Connected to process 1906158 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 64 blocks, 64 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1906158
+[1906158] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:26:02, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           1.85
+    gpu__time_duration.avg                                                         msecond                           9.79
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                          29.63
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                     10,704,980
+    Memory [%]                                                                           %                           3.04
+    DRAM Throughput                                                                      %                           1.85
+    Duration                                                                       msecond                           9.79
+    L1/TEX Cache Throughput                                                              %                           5.12
+    L2 Cache Throughput                                                                  %                           2.53
+    SM Active Cycles                                                                 cycle                   6,348,522.58
+    Compute (SM) [%]                                                                     %                           2.77
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                         64
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          64
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          4,096
+    Waves Per SM                                                                                                     0.02
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 64 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             32
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             32
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                           3.12
+    Achieved Active Warps Per SM                                                      warp                           2.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (3.1%) can be the result of warp scheduling overheads    
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,180
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=128 blocks=64
+==PROF== Connected to process 1906216 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 64 blocks, 128 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1906216
+[1906216] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:26:07, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           3.62
+    gpu__time_duration.avg                                                         msecond                           5.00
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                          59.11
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                      5,473,996
+    Memory [%]                                                                           %                           5.91
+    DRAM Throughput                                                                      %                           3.62
+    Duration                                                                       msecond                           5.00
+    L1/TEX Cache Throughput                                                              %                           9.99
+    L2 Cache Throughput                                                                  %                           4.94
+    SM Active Cycles                                                                 cycle                   3,239,915.08
+    Compute (SM) [%]                                                                     %                           5.42
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.0 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        128
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          64
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                          8,192
+    Waves Per SM                                                                                                     0.04
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 64 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                             16
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                             16
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                           6.25
+    Achieved Active Warps Per SM                                                      warp                           4.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (6.2%) can be the result of warp scheduling overheads    
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,436
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=256 blocks=64
+==PROF== Connected to process 1906249 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)
+==PROF== Profiling "_Z16sobel_kernel_gpuPfS_iiiS_S_" - 1: 0%....50%....100% - 13 passes
+ Read data from the file ../data/zebra-gray-int8-4x 
+ GPU configuration: 64 blocks, 256 threads per block 
+ Wrote the output file ../data/processed-raw-int8-4x-cpu.dat 
+==PROF== Disconnected from process 1906249
+[1906249] sobel_gpu@127.0.0.1
+  _Z16sobel_kernel_gpuPfS_iiiS_S_, 2023-Nov-01 01:26:13, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed                                   %                           6.56
+    gpu__time_duration.avg                                                         msecond                           2.76
+    smsp__cycles_active.avg.pct_of_peak_sustained_elapsed                                %                          59.02
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+    Section: GPU Speed Of Light Throughput
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    DRAM Frequency                                                           cycle/nsecond                           1.21
+    SM Frequency                                                             cycle/nsecond                           1.09
+    Elapsed Cycles                                                                   cycle                      3,016,227
+    Memory [%]                                                                           %                          10.78
+    DRAM Throughput                                                                      %                           6.56
+    Duration                                                                       msecond                           2.76
+    L1/TEX Cache Throughput                                                              %                          18.29
+    L2 Cache Throughput                                                                  %                           8.28
+    SM Active Cycles                                                                 cycle                   1,778,092.94
+    Compute (SM) [%]                                                                     %                           9.83
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel grid is too small to fill the available resources on this device, resulting in only 0.1 full      
+          waves across all SMs. Look at Launch Statistics for more details.                                             
+
+    Section: Launch Statistics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Size                                                                                                        256
+    Function Cache Configuration                                                                  cudaFuncCachePreferNone
+    Grid Size                                                                                                          64
+    Registers Per Thread                                                   register/thread                             32
+    Shared Memory Configuration Size                                                 Kbyte                          32.77
+    Driver Shared Memory Per Block                                             Kbyte/block                           1.02
+    Dynamic Shared Memory Per Block                                             byte/block                              0
+    Static Shared Memory Per Block                                              byte/block                              0
+    Threads                                                                         thread                         16,384
+    Waves Per SM                                                                                                     0.07
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   The grid for this launch is configured to execute only 64 blocks, which is less than the GPU's 108            
+          multiprocessors. This can underutilize some multiprocessors. If you do not intend to execute this kernel      
+          concurrently with other workloads, consider reducing the block size to have at least one block per            
+          multiprocessor or increase the size of the grid to fully utilize the available hardware resources. See the    
+          Hardware Model (https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#metrics-hw-model)            
+          description for more details on launch configurations.                                                        
+
+    Section: Occupancy
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Block Limit SM                                                                   block                             32
+    Block Limit Registers                                                            block                              8
+    Block Limit Shared Mem                                                           block                             32
+    Block Limit Warps                                                                block                              8
+    Theoretical Active Warps per SM                                                   warp                             64
+    Theoretical Occupancy                                                                %                            100
+    Achieved Occupancy                                                                   %                          12.48
+    Achieved Active Warps Per SM                                                      warp                           7.99
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
+          theoretical (100.0%) and measured achieved occupancy (12.5%) can be the result of warp scheduling overheads   
+          or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
+          as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
+          (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
+          optimizing occupancy.                                                                                         
+
+    Section: Source Counters
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    Branch Instructions Ratio                                                            %                           0.05
+    Branch Instructions                                                               inst                      6,874,948
+    Branch Efficiency                                                                    %                          99.83
+    Avg. Divergent Branches                                                                                         17.96
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    WRN   This kernel has uncoalesced global accesses resulting in a total of 6855665 excessive sectors (9% of the      
+          total 73174402 sectors). Check the L2 Theoretical Sectors Global Excessive table for the primary source       
+          locations. The CUDA Programming Guide                                                                         
+          (https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#device-memory-accesses) had additional      
+          information on reducing uncoalesced device memory accesses.                                                   
+
+threads per blocks=512 blocks=64
+==PROF== Connected to process 1906283 (/pscratch/sd/d/david/sobel-harness-instructional/build/sobel_gpu)

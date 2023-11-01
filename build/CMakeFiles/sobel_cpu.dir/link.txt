@@ -1,0 +1,1 @@
+/opt/cray/pe/craype/2.7.20/bin/CC -fast -O3 -DNDEBUG -fopenmp CMakeFiles/sobel_cpu.dir/sobel_cpu.cpp.o -o sobel_cpu 
