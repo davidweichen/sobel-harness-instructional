@@ -184,7 +184,7 @@ main (int ac, char *av[])
    }
    if(ac>2)
    {
-   	nBlocks = atoi(av[3]);
+   	nBlocks = atoi(av[4]);
    }
 
 
