@@ -3,7 +3,7 @@
 #SBATCH -C gpu
 #SBATCH -G 1
 #SBATCH -q regular
-#SBATCH -t 00:10:00
+#SBATCH -t 00:40:00
 #SBATCH -A m3930
 #SBATCH -J queue
 #SBATCH --job-name=gpu-job
