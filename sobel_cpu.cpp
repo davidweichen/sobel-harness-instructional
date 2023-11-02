@@ -53,7 +53,7 @@ sobel_filtered_pixel(float *s, int i, int j , int ncols, int nrows, float *gx, f
          for(int l = 0; l < 3; l++){
             if (i < 1 || i >= nrows - 1 || j < 1 || j >= ncols - 1){
                 //do nothing to return
-                return s[i*ncols + j];
+                return 0;
             }
             int x = i + k - 1;
             int y = j + l - 1;
