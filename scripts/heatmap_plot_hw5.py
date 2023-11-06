@@ -23,12 +23,54 @@ import matplotlib.pyplot as plt
 threads_per_block = ['32', '64', '128', '256', '512', '1024'] # y axis, 6 of them
 thread_blocks = ["1", "4", "16", "64", "256", "1024", "4096"] # x axis, 7 of them
 
-runtime = np.array([[0.8, 2.4, 2.5, 3.9, 0.0, 4.0, 0.0],
-                    [2.4, 0.0, 4.0, 1.0, 2.7, 0.0, 0.0],
-                    [1.1, 2.4, 0.8, 4.3, 1.9, 4.4, 0.0],
-                    [0.6, 0.0, 0.3, 0.0, 3.1, 0.0, 0.0],
-                    [0.7, 1.7, 0.6, 2.6, 2.2, 6.2, 0.0],
-                    [1.3, 1.2, 0.0, 0.0, 0.0, 3.2, 5.1]])
+runtime = np.array([[0.03,
+0.11,
+0.38,
+1.49,
+5.66,
+20.48,
+33.36
+],
+                    [0.05,
+0.21,
+0.82,
+3.04,
+11.11,
+34.9,
+56.64
+],
+                    [0.11,
+0.38,
+1.5,
+5.91,
+20.21,
+52.35,
+66.65
+],
+                    [0.2,
+0.71,
+2.78,
+10.77,
+34.46,
+57.26,
+70.48
+],
+                    [0.35,
+1.3,
+4.64,
+18.3,
+48.25,
+64.74,
+70.26
+],
+                    [0.57,
+1.92,
+7.6,
+28.48,
+82.41,
+65.1,
+67.04
+]])
 
 
 fig, ax = plt.subplots()
@@ -51,7 +93,7 @@ for i in range(len(threads_per_block)): # y axis
         text = ax.text(j, i, runtime[i, j],
                        ha="center", va="center", color="k")
 
-ax.set_title("Runtime on <what platform> at Varying Block Size and Number of Blocks")
+ax.set_title("% of peak sustained memory bandwidth on GPU-CUDA")
 ax.set_ylabel('Threads per block')
 ax.set_xlabel('Block Sizes')
 fig.colorbar(im, ax=ax)
